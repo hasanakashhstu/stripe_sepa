@@ -1,0 +1,963 @@
+Fonction CreatePayment.[2024-02-12 19:06:20] Début de createPayment pour la facture ID: 
+Fonction CreatePayment.[2024-02-12 19:06:21] Début de createPayment pour la facture ID: 
+Fonction CreatePayment.
+[2024-02-12 19:11:59] Début de createPayment pour la facture ID: 1063
+[2024-02-12 19:11:59] Statut de createPayment pour la facture ID: 1063 est: pending
+Fonction CreatePayment.
+[2024-02-12 19:19:13] Début de createPayment pour la facture ID: 1064
+[2024-02-12 19:19:13] Statut de createPayment pour la facture ID: 1064 est: pending
+Fonction CreatePayment.
+[2024-02-12 19:24:08] Début de createPayment pour la facture ID: 1065
+[2024-02-12 19:24:08] Statut de createPayment pour la facture ID: 1065 est: pending
+Tags :Array
+Tags AS String :Abos,Chaud,Audit Tool,Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:25:04] Début de createPayment pour la facture ID: 1066
+[2024-02-12 19:25:04] Statut de createPayment pour la facture ID: 1066 est: pending
+Tags :Array
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:27:05] Début de createPayment pour la facture ID: 1067
+[2024-02-12 19:27:05] Statut de createPayment pour la facture ID: 1067 est: pending
+Tags :Array
+Tags AS String :Annuel,Maintenance,Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:30:54] Début de createPayment pour la facture ID: 1068
+[2024-02-12 19:30:54] Statut de createPayment pour la facture ID: 1068 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:31:50] Début de createPayment pour la facture ID: 1069
+[2024-02-12 19:31:50] Statut de createPayment pour la facture ID: 1069 est: pending
+Tags :Audit Tool, ds
+Tags AS String :Audit Tool,ds,Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:54:46] Début de createPayment pour la facture ID: 1070
+[2024-02-12 19:54:46] Statut de createPayment pour la facture ID: 1070 est: pending
+Tags :Abos, Annuel, Client Direct
+Tags AS String :Abos,Annuel,Client Direct,Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:59:45] Début de createPayment pour la facture ID: 1071
+[2024-02-12 19:59:45] Statut de createPayment pour la facture ID: 1071 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-12 19:59:46] Début de createPayment pour la facture ID: 1072
+[2024-02-12 19:59:46] Statut de createPayment pour la facture ID: 1072 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:03] Début de createPayment pour la facture ID: 1074
+[2024-02-13 21:02:03] Statut de createPayment pour la facture ID: 1074 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:05] Début de createPayment pour la facture ID: 1075
+[2024-02-13 21:02:05] Statut de createPayment pour la facture ID: 1075 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:06] Début de createPayment pour la facture ID: 1076
+[2024-02-13 21:02:06] Statut de createPayment pour la facture ID: 1076 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:07] Début de createPayment pour la facture ID: 1077
+[2024-02-13 21:02:07] Statut de createPayment pour la facture ID: 1077 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:09] Début de createPayment pour la facture ID: 1078
+[2024-02-13 21:02:09] Statut de createPayment pour la facture ID: 1078 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:10] Début de createPayment pour la facture ID: 1079
+[2024-02-13 21:02:10] Statut de createPayment pour la facture ID: 1079 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:11] Début de createPayment pour la facture ID: 1080
+[2024-02-13 21:02:11] Statut de createPayment pour la facture ID: 1080 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:13] Début de createPayment pour la facture ID: 1081
+[2024-02-13 21:02:13] Statut de createPayment pour la facture ID: 1081 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:14] Début de createPayment pour la facture ID: 1082
+[2024-02-13 21:02:14] Statut de createPayment pour la facture ID: 1082 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:15] Début de createPayment pour la facture ID: 1083
+[2024-02-13 21:02:15] Statut de createPayment pour la facture ID: 1083 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-13 21:02:16] Début de createPayment pour la facture ID: 1084
+[2024-02-13 21:02:16] Statut de createPayment pour la facture ID: 1084 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:04] Début de createPayment pour la facture ID: 1086
+[2024-02-14 21:01:04] Statut de createPayment pour la facture ID: 1086 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:05] Début de createPayment pour la facture ID: 1087
+[2024-02-14 21:01:05] Statut de createPayment pour la facture ID: 1087 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:06] Début de createPayment pour la facture ID: 1088
+[2024-02-14 21:01:06] Statut de createPayment pour la facture ID: 1088 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:08] Début de createPayment pour la facture ID: 1089
+[2024-02-14 21:01:08] Statut de createPayment pour la facture ID: 1089 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:09] Début de createPayment pour la facture ID: 1090
+[2024-02-14 21:01:09] Statut de createPayment pour la facture ID: 1090 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:10] Début de createPayment pour la facture ID: 1091
+[2024-02-14 21:01:10] Statut de createPayment pour la facture ID: 1091 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:12] Début de createPayment pour la facture ID: 1092
+[2024-02-14 21:01:12] Statut de createPayment pour la facture ID: 1092 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:13] Début de createPayment pour la facture ID: 1093
+[2024-02-14 21:01:13] Statut de createPayment pour la facture ID: 1093 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:14] Début de createPayment pour la facture ID: 1094
+[2024-02-14 21:01:14] Statut de createPayment pour la facture ID: 1094 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:15] Début de createPayment pour la facture ID: 1095
+[2024-02-14 21:01:15] Statut de createPayment pour la facture ID: 1095 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-14 21:01:17] Début de createPayment pour la facture ID: 1096
+[2024-02-14 21:01:17] Statut de createPayment pour la facture ID: 1096 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 16:13:17] Début de createPayment pour la facture ID: 1097
+[2024-02-15 16:13:17] Statut de createPayment pour la facture ID: 1097 est: pending
+Tags :Abos, Mensuel, Sepa 18
+Tags AS String :Abos,Mensuel,Sepa 18,Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:04] Début de createPayment pour la facture ID: 1099
+[2024-02-15 21:04:04] Statut de createPayment pour la facture ID: 1099 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:05] Début de createPayment pour la facture ID: 1100
+[2024-02-15 21:04:05] Statut de createPayment pour la facture ID: 1100 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:06] Début de createPayment pour la facture ID: 1101
+[2024-02-15 21:04:06] Statut de createPayment pour la facture ID: 1101 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:08] Début de createPayment pour la facture ID: 1102
+[2024-02-15 21:04:08] Statut de createPayment pour la facture ID: 1102 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:09] Début de createPayment pour la facture ID: 1103
+[2024-02-15 21:04:09] Statut de createPayment pour la facture ID: 1103 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:10] Début de createPayment pour la facture ID: 1104
+[2024-02-15 21:04:10] Statut de createPayment pour la facture ID: 1104 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:11] Début de createPayment pour la facture ID: 1105
+[2024-02-15 21:04:11] Statut de createPayment pour la facture ID: 1105 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:13] Début de createPayment pour la facture ID: 1106
+[2024-02-15 21:04:13] Statut de createPayment pour la facture ID: 1106 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:14] Début de createPayment pour la facture ID: 1107
+[2024-02-15 21:04:14] Statut de createPayment pour la facture ID: 1107 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:15] Début de createPayment pour la facture ID: 1108
+[2024-02-15 21:04:15] Statut de createPayment pour la facture ID: 1108 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-15 21:04:17] Début de createPayment pour la facture ID: 1109
+[2024-02-15 21:04:17] Statut de createPayment pour la facture ID: 1109 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:03] Début de createPayment pour la facture ID: 1111
+[2024-02-16 21:01:03] Statut de createPayment pour la facture ID: 1111 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:05] Début de createPayment pour la facture ID: 1112
+[2024-02-16 21:01:05] Statut de createPayment pour la facture ID: 1112 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:06] Début de createPayment pour la facture ID: 1113
+[2024-02-16 21:01:06] Statut de createPayment pour la facture ID: 1113 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:07] Début de createPayment pour la facture ID: 1114
+[2024-02-16 21:01:07] Statut de createPayment pour la facture ID: 1114 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:08] Début de createPayment pour la facture ID: 1115
+[2024-02-16 21:01:08] Statut de createPayment pour la facture ID: 1115 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:10] Début de createPayment pour la facture ID: 1116
+[2024-02-16 21:01:10] Statut de createPayment pour la facture ID: 1116 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:11] Début de createPayment pour la facture ID: 1117
+[2024-02-16 21:01:11] Statut de createPayment pour la facture ID: 1117 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:12] Début de createPayment pour la facture ID: 1118
+[2024-02-16 21:01:12] Statut de createPayment pour la facture ID: 1118 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:14] Début de createPayment pour la facture ID: 1119
+[2024-02-16 21:01:14] Statut de createPayment pour la facture ID: 1119 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-16 21:01:15] Début de createPayment pour la facture ID: 1120
+[2024-02-16 21:01:15] Statut de createPayment pour la facture ID: 1120 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:03] Début de createPayment pour la facture ID: 1122
+[2024-02-17 21:05:03] Statut de createPayment pour la facture ID: 1122 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:05] Début de createPayment pour la facture ID: 1123
+[2024-02-17 21:05:05] Statut de createPayment pour la facture ID: 1123 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:06] Début de createPayment pour la facture ID: 1124
+[2024-02-17 21:05:06] Statut de createPayment pour la facture ID: 1124 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:07] Début de createPayment pour la facture ID: 1125
+[2024-02-17 21:05:07] Statut de createPayment pour la facture ID: 1125 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:09] Début de createPayment pour la facture ID: 1126
+[2024-02-17 21:05:09] Statut de createPayment pour la facture ID: 1126 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:10] Début de createPayment pour la facture ID: 1127
+[2024-02-17 21:05:10] Statut de createPayment pour la facture ID: 1127 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:11] Début de createPayment pour la facture ID: 1128
+[2024-02-17 21:05:11] Statut de createPayment pour la facture ID: 1128 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:12] Début de createPayment pour la facture ID: 1129
+[2024-02-17 21:05:12] Statut de createPayment pour la facture ID: 1129 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:14] Début de createPayment pour la facture ID: 1130
+[2024-02-17 21:05:14] Statut de createPayment pour la facture ID: 1130 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-17 21:05:15] Début de createPayment pour la facture ID: 1131
+[2024-02-17 21:05:15] Statut de createPayment pour la facture ID: 1131 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:04] Début de createPayment pour la facture ID: 1133
+[2024-02-18 21:01:04] Statut de createPayment pour la facture ID: 1133 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:05] Début de createPayment pour la facture ID: 1134
+[2024-02-18 21:01:05] Statut de createPayment pour la facture ID: 1134 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:07] Début de createPayment pour la facture ID: 1135
+[2024-02-18 21:01:07] Statut de createPayment pour la facture ID: 1135 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:08] Début de createPayment pour la facture ID: 1136
+[2024-02-18 21:01:08] Statut de createPayment pour la facture ID: 1136 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:09] Début de createPayment pour la facture ID: 1137
+[2024-02-18 21:01:09] Statut de createPayment pour la facture ID: 1137 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:10] Début de createPayment pour la facture ID: 1138
+[2024-02-18 21:01:10] Statut de createPayment pour la facture ID: 1138 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:12] Début de createPayment pour la facture ID: 1139
+[2024-02-18 21:01:12] Statut de createPayment pour la facture ID: 1139 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:13] Début de createPayment pour la facture ID: 1140
+[2024-02-18 21:01:13] Statut de createPayment pour la facture ID: 1140 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:14] Début de createPayment pour la facture ID: 1141
+[2024-02-18 21:01:14] Statut de createPayment pour la facture ID: 1141 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-18 21:01:15] Début de createPayment pour la facture ID: 1142
+[2024-02-18 21:01:15] Statut de createPayment pour la facture ID: 1142 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:03] Début de createPayment pour la facture ID: 1144
+[2024-02-19 21:05:03] Statut de createPayment pour la facture ID: 1144 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:05] Début de createPayment pour la facture ID: 1145
+[2024-02-19 21:05:05] Statut de createPayment pour la facture ID: 1145 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:06] Début de createPayment pour la facture ID: 1146
+[2024-02-19 21:05:06] Statut de createPayment pour la facture ID: 1146 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:07] Début de createPayment pour la facture ID: 1147
+[2024-02-19 21:05:07] Statut de createPayment pour la facture ID: 1147 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:08] Début de createPayment pour la facture ID: 1148
+[2024-02-19 21:05:08] Statut de createPayment pour la facture ID: 1148 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:10] Début de createPayment pour la facture ID: 1149
+[2024-02-19 21:05:10] Statut de createPayment pour la facture ID: 1149 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:11] Début de createPayment pour la facture ID: 1150
+[2024-02-19 21:05:11] Statut de createPayment pour la facture ID: 1150 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:12] Début de createPayment pour la facture ID: 1151
+[2024-02-19 21:05:12] Statut de createPayment pour la facture ID: 1151 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:14] Début de createPayment pour la facture ID: 1152
+[2024-02-19 21:05:14] Statut de createPayment pour la facture ID: 1152 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-19 21:05:15] Début de createPayment pour la facture ID: 1153
+[2024-02-19 21:05:15] Statut de createPayment pour la facture ID: 1153 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:04] Début de createPayment pour la facture ID: 1155
+[2024-02-20 21:05:04] Statut de createPayment pour la facture ID: 1155 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:05] Début de createPayment pour la facture ID: 1156
+[2024-02-20 21:05:05] Statut de createPayment pour la facture ID: 1156 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:06] Début de createPayment pour la facture ID: 1157
+[2024-02-20 21:05:06] Statut de createPayment pour la facture ID: 1157 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:08] Début de createPayment pour la facture ID: 1158
+[2024-02-20 21:05:08] Statut de createPayment pour la facture ID: 1158 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:09] Début de createPayment pour la facture ID: 1159
+[2024-02-20 21:05:09] Statut de createPayment pour la facture ID: 1159 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:10] Début de createPayment pour la facture ID: 1160
+[2024-02-20 21:05:10] Statut de createPayment pour la facture ID: 1160 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:11] Début de createPayment pour la facture ID: 1161
+[2024-02-20 21:05:11] Statut de createPayment pour la facture ID: 1161 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:13] Début de createPayment pour la facture ID: 1162
+[2024-02-20 21:05:13] Statut de createPayment pour la facture ID: 1162 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:14] Début de createPayment pour la facture ID: 1163
+[2024-02-20 21:05:14] Statut de createPayment pour la facture ID: 1163 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-20 21:05:15] Début de createPayment pour la facture ID: 1164
+[2024-02-20 21:05:15] Statut de createPayment pour la facture ID: 1164 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:04] Début de createPayment pour la facture ID: 1167
+[2024-02-21 21:01:04] Statut de createPayment pour la facture ID: 1167 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:05] Début de createPayment pour la facture ID: 1168
+[2024-02-21 21:01:05] Statut de createPayment pour la facture ID: 1168 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:06] Début de createPayment pour la facture ID: 1169
+[2024-02-21 21:01:06] Statut de createPayment pour la facture ID: 1169 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:08] Début de createPayment pour la facture ID: 1170
+[2024-02-21 21:01:08] Statut de createPayment pour la facture ID: 1170 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:09] Début de createPayment pour la facture ID: 1171
+[2024-02-21 21:01:09] Statut de createPayment pour la facture ID: 1171 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:10] Début de createPayment pour la facture ID: 1172
+[2024-02-21 21:01:10] Statut de createPayment pour la facture ID: 1172 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:11] Début de createPayment pour la facture ID: 1173
+[2024-02-21 21:01:12] Statut de createPayment pour la facture ID: 1173 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:13] Début de createPayment pour la facture ID: 1174
+[2024-02-21 21:01:13] Statut de createPayment pour la facture ID: 1174 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:14] Début de createPayment pour la facture ID: 1175
+[2024-02-21 21:01:14] Statut de createPayment pour la facture ID: 1175 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-21 21:01:16] Début de createPayment pour la facture ID: 1176
+[2024-02-21 21:01:16] Statut de createPayment pour la facture ID: 1176 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:05] Début de createPayment pour la facture ID: 1181
+[2024-02-22 21:02:05] Statut de createPayment pour la facture ID: 1181 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:06] Début de createPayment pour la facture ID: 1182
+[2024-02-22 21:02:06] Statut de createPayment pour la facture ID: 1182 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:07] Début de createPayment pour la facture ID: 1183
+[2024-02-22 21:02:07] Statut de createPayment pour la facture ID: 1183 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:08] Début de createPayment pour la facture ID: 1184
+[2024-02-22 21:02:08] Statut de createPayment pour la facture ID: 1184 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:10] Début de createPayment pour la facture ID: 1185
+[2024-02-22 21:02:10] Statut de createPayment pour la facture ID: 1185 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:11] Début de createPayment pour la facture ID: 1186
+[2024-02-22 21:02:11] Statut de createPayment pour la facture ID: 1186 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:12] Début de createPayment pour la facture ID: 1187
+[2024-02-22 21:02:12] Statut de createPayment pour la facture ID: 1187 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:13] Début de createPayment pour la facture ID: 1188
+[2024-02-22 21:02:13] Statut de createPayment pour la facture ID: 1188 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:15] Début de createPayment pour la facture ID: 1189
+[2024-02-22 21:02:15] Statut de createPayment pour la facture ID: 1189 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-22 21:02:16] Début de createPayment pour la facture ID: 1190
+[2024-02-22 21:02:16] Statut de createPayment pour la facture ID: 1190 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:05] Début de createPayment pour la facture ID: 1196
+[2024-02-23 21:03:05] Statut de createPayment pour la facture ID: 1196 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:07] Début de createPayment pour la facture ID: 1197
+[2024-02-23 21:03:07] Statut de createPayment pour la facture ID: 1197 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:08] Début de createPayment pour la facture ID: 1198
+[2024-02-23 21:03:08] Statut de createPayment pour la facture ID: 1198 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:09] Début de createPayment pour la facture ID: 1199
+[2024-02-23 21:03:09] Statut de createPayment pour la facture ID: 1199 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:10] Début de createPayment pour la facture ID: 1200
+[2024-02-23 21:03:10] Statut de createPayment pour la facture ID: 1200 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:12] Début de createPayment pour la facture ID: 1201
+[2024-02-23 21:03:12] Statut de createPayment pour la facture ID: 1201 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:13] Début de createPayment pour la facture ID: 1202
+[2024-02-23 21:03:13] Statut de createPayment pour la facture ID: 1202 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:14] Début de createPayment pour la facture ID: 1203
+[2024-02-23 21:03:14] Statut de createPayment pour la facture ID: 1203 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:16] Début de createPayment pour la facture ID: 1204
+[2024-02-23 21:03:16] Statut de createPayment pour la facture ID: 1204 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-23 21:03:17] Début de createPayment pour la facture ID: 1205
+[2024-02-23 21:03:17] Statut de createPayment pour la facture ID: 1205 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:05] Début de createPayment pour la facture ID: 1211
+[2024-02-24 21:01:05] Statut de createPayment pour la facture ID: 1211 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:06] Début de createPayment pour la facture ID: 1212
+[2024-02-24 21:01:06] Statut de createPayment pour la facture ID: 1212 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:08] Début de createPayment pour la facture ID: 1213
+[2024-02-24 21:01:08] Statut de createPayment pour la facture ID: 1213 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:09] Début de createPayment pour la facture ID: 1214
+[2024-02-24 21:01:09] Statut de createPayment pour la facture ID: 1214 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:10] Début de createPayment pour la facture ID: 1215
+[2024-02-24 21:01:10] Statut de createPayment pour la facture ID: 1215 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:11] Début de createPayment pour la facture ID: 1216
+[2024-02-24 21:01:11] Statut de createPayment pour la facture ID: 1216 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:13] Début de createPayment pour la facture ID: 1217
+[2024-02-24 21:01:13] Statut de createPayment pour la facture ID: 1217 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:14] Début de createPayment pour la facture ID: 1218
+[2024-02-24 21:01:14] Statut de createPayment pour la facture ID: 1218 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:15] Début de createPayment pour la facture ID: 1219
+[2024-02-24 21:01:15] Statut de createPayment pour la facture ID: 1219 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-24 21:01:16] Début de createPayment pour la facture ID: 1220
+[2024-02-24 21:01:16] Statut de createPayment pour la facture ID: 1220 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:09] Début de createPayment pour la facture ID: 1234
+[2024-02-25 21:03:09] Statut de createPayment pour la facture ID: 1234 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:10] Début de createPayment pour la facture ID: 1235
+[2024-02-25 21:03:10] Statut de createPayment pour la facture ID: 1235 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:11] Début de createPayment pour la facture ID: 1236
+[2024-02-25 21:03:11] Statut de createPayment pour la facture ID: 1236 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:12] Début de createPayment pour la facture ID: 1237
+[2024-02-25 21:03:12] Statut de createPayment pour la facture ID: 1237 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:14] Début de createPayment pour la facture ID: 1238
+[2024-02-25 21:03:14] Statut de createPayment pour la facture ID: 1238 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:15] Début de createPayment pour la facture ID: 1239
+[2024-02-25 21:03:15] Statut de createPayment pour la facture ID: 1239 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:16] Début de createPayment pour la facture ID: 1240
+[2024-02-25 21:03:16] Statut de createPayment pour la facture ID: 1240 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:17] Début de createPayment pour la facture ID: 1241
+[2024-02-25 21:03:17] Statut de createPayment pour la facture ID: 1241 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:19] Début de createPayment pour la facture ID: 1242
+[2024-02-25 21:03:19] Statut de createPayment pour la facture ID: 1242 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-02-25 21:03:20] Début de createPayment pour la facture ID: 1243
+[2024-02-25 21:03:20] Statut de createPayment pour la facture ID: 1243 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-04-23 21:00:04] Début de createPayment pour la facture ID: 1102
+[2024-04-23 21:00:04] Statut de createPayment pour la facture ID: 1102 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-07 21:05:03] Début de createPayment pour la facture ID: 1114
+[2024-05-07 21:05:03] Statut de createPayment pour la facture ID: 1114 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-08 21:01:03] Début de createPayment pour la facture ID: 1116
+[2024-05-08 21:01:03] Statut de createPayment pour la facture ID: 1116 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-10 21:01:03] Début de createPayment pour la facture ID: 1121
+[2024-05-10 21:01:03] Statut de createPayment pour la facture ID: 1121 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-10 21:01:04] Début de createPayment pour la facture ID: 1122
+[2024-05-10 21:01:04] Statut de createPayment pour la facture ID: 1122 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-10 21:01:06] Début de createPayment pour la facture ID: 1123
+[2024-05-10 21:01:06] Statut de createPayment pour la facture ID: 1123 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-10 21:01:08] Début de createPayment pour la facture ID: 1124
+[2024-05-10 21:01:08] Statut de createPayment pour la facture ID: 1124 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-05-23 21:02:04] Début de createPayment pour la facture ID: 1150
+[2024-05-23 21:02:04] Statut de createPayment pour la facture ID: 1150 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-07 21:00:03] Début de createPayment pour la facture ID: 1160
+[2024-06-07 21:00:03] Statut de createPayment pour la facture ID: 1160 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-08 21:02:03] Début de createPayment pour la facture ID: 1162
+[2024-06-08 21:02:03] Statut de createPayment pour la facture ID: 1162 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-10 21:00:04] Début de createPayment pour la facture ID: 1167
+[2024-06-10 21:00:04] Statut de createPayment pour la facture ID: 1167 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-10 21:00:05] Début de createPayment pour la facture ID: 1168
+[2024-06-10 21:00:05] Statut de createPayment pour la facture ID: 1168 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-10 21:00:06] Début de createPayment pour la facture ID: 1169
+[2024-06-10 21:00:06] Statut de createPayment pour la facture ID: 1169 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-10 21:00:08] Début de createPayment pour la facture ID: 1170
+[2024-06-10 21:00:08] Statut de createPayment pour la facture ID: 1170 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-17 17:23:50] Début de createPayment pour la facture ID: 1182
+[2024-06-17 17:23:50] Statut de createPayment pour la facture ID: 1182 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-17 17:25:42] Début de createPayment pour la facture ID: 1183
+[2024-06-17 17:25:42] Statut de createPayment pour la facture ID: 1183 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-06-22 11:59:24] Début de createPayment pour la facture ID: 1192
+[2024-06-22 11:59:24] Statut de createPayment pour la facture ID: 1192 est: pending
+Tags :Abos, Mensuel, SEPA 12
+Tags AS String :Abos,Mensuel,SEPA 12,Attente SEPA
+Fonction CreatePayment.
+[2024-06-22 12:05:32] Début de createPayment pour la facture ID: 1194
+[2024-06-22 12:05:32] Statut de createPayment pour la facture ID: 1194 est: pending
+Tags :Abos, Mensuel
+Tags AS String :Abos,Mensuel,Attente SEPA
+Fonction CreatePayment.
+[2024-06-23 21:05:03] Début de createPayment pour la facture ID: 1199
+[2024-06-23 21:05:03] Statut de createPayment pour la facture ID: 1199 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-07 21:01:04] Début de createPayment pour la facture ID: 1210
+[2024-07-07 21:01:04] Statut de createPayment pour la facture ID: 1210 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-08 21:01:03] Début de createPayment pour la facture ID: 1212
+[2024-07-08 21:01:03] Statut de createPayment pour la facture ID: 1212 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-10 16:13:23] Début de createPayment pour la facture ID: 1215
+[2024-07-10 16:13:23] Statut de createPayment pour la facture ID: 1215 est: pending
+Tags :Abos, Mensuel, Sepa 6
+Tags AS String :Abos,Mensuel,Sepa 6,Attente SEPA
+Fonction CreatePayment.
+[2024-07-10 21:05:04] Début de createPayment pour la facture ID: 1217
+[2024-07-10 21:05:04] Statut de createPayment pour la facture ID: 1217 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-10 21:05:05] Début de createPayment pour la facture ID: 1218
+[2024-07-10 21:05:05] Statut de createPayment pour la facture ID: 1218 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-10 21:05:06] Début de createPayment pour la facture ID: 1219
+[2024-07-10 21:05:06] Statut de createPayment pour la facture ID: 1219 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-10 21:05:08] Début de createPayment pour la facture ID: 1220
+[2024-07-10 21:05:08] Statut de createPayment pour la facture ID: 1220 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-22 21:02:03] Début de createPayment pour la facture ID: 1236
+[2024-07-22 21:02:03] Statut de createPayment pour la facture ID: 1236 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-23 21:03:03] Début de createPayment pour la facture ID: 1238
+[2024-07-23 21:03:03] Statut de createPayment pour la facture ID: 1238 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-07-30 17:36:31] Début de createPayment pour la facture ID: 1247
+[2024-07-30 17:36:31] Statut de createPayment pour la facture ID: 1247 est: pending
+Tags :Abos, Mensuel, SEPA 12
+Tags AS String :Abos,Mensuel,SEPA 12,Attente SEPA
+Fonction CreatePayment.
+[2024-08-07 21:02:03] Début de createPayment pour la facture ID: 1260
+[2024-08-07 21:02:03] Statut de createPayment pour la facture ID: 1260 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-08 21:02:04] Début de createPayment pour la facture ID: 1261
+[2024-08-08 21:02:04] Statut de createPayment pour la facture ID: 1261 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-10 21:03:03] Début de createPayment pour la facture ID: 1266
+[2024-08-10 21:03:03] Statut de createPayment pour la facture ID: 1266 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-10 21:03:05] Début de createPayment pour la facture ID: 1267
+[2024-08-10 21:03:05] Statut de createPayment pour la facture ID: 1267 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-10 21:03:06] Début de createPayment pour la facture ID: 1268
+[2024-08-10 21:03:06] Statut de createPayment pour la facture ID: 1268 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-10 21:03:07] Début de createPayment pour la facture ID: 1269
+[2024-08-10 21:03:07] Statut de createPayment pour la facture ID: 1269 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-10 21:03:08] Début de createPayment pour la facture ID: 1270
+[2024-08-10 21:03:08] Statut de createPayment pour la facture ID: 1270 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-22 21:02:03] Début de createPayment pour la facture ID: 1291
+[2024-08-22 21:02:03] Statut de createPayment pour la facture ID: 1291 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-23 21:02:03] Début de createPayment pour la facture ID: 1293
+[2024-08-23 21:02:03] Statut de createPayment pour la facture ID: 1293 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-08-30 21:01:03] Début de createPayment pour la facture ID: 1299
+[2024-08-30 21:01:03] Statut de createPayment pour la facture ID: 1299 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-07 21:02:03] Début de createPayment pour la facture ID: 1305
+[2024-09-07 21:02:03] Statut de createPayment pour la facture ID: 1305 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-08 21:00:03] Début de createPayment pour la facture ID: 1306
+[2024-09-08 21:00:03] Statut de createPayment pour la facture ID: 1306 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-10 21:02:03] Début de createPayment pour la facture ID: 1311
+[2024-09-10 21:02:03] Statut de createPayment pour la facture ID: 1311 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-10 21:02:04] Début de createPayment pour la facture ID: 1312
+[2024-09-10 21:02:04] Statut de createPayment pour la facture ID: 1312 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-10 21:02:06] Début de createPayment pour la facture ID: 1313
+[2024-09-10 21:02:06] Statut de createPayment pour la facture ID: 1313 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-10 21:02:07] Début de createPayment pour la facture ID: 1314
+[2024-09-10 21:02:07] Statut de createPayment pour la facture ID: 1314 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-10 21:02:08] Début de createPayment pour la facture ID: 1315
+[2024-09-10 21:02:08] Statut de createPayment pour la facture ID: 1315 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-22 21:01:04] Début de createPayment pour la facture ID: 1338
+[2024-09-22 21:01:04] Statut de createPayment pour la facture ID: 1338 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-23 17:18:16] Début de createPayment pour la facture ID: 1342
+[2024-09-23 17:18:16] Statut de createPayment pour la facture ID: 1342 est: pending
+Tags :
+Tags AS String :Attente SEPA
+Fonction CreatePayment.
+[2024-09-30 21:03:03] Début de createPayment pour la facture ID: 1349
+[2024-09-30 21:03:03] Statut de createPayment pour la facture ID: 1349 est: pending
+Tags :
+Tags AS String :Attente SEPA
