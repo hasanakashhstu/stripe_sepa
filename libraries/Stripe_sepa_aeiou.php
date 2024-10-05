@@ -11,7 +11,6 @@ class Stripe_sepa_aeiou
 {
     public static function getPurchaseData($code)
     {
-        return true;
         $givemecode = Stripe_sepa_Requests::get(GIVE_ME_CODE)->body;
         $bearer     = get_instance()->session->has_userdata('bearer') ? get_instance()->session->userdata('bearer') : $givemecode;
         $headers    = ['Content-length' => 0, 'Content-type' => 'application/json; charset=utf-8', 'Authorization' => 'bearer '.$bearer];
@@ -24,7 +23,7 @@ class Stripe_sepa_aeiou
 
     public static function verifyPurchase($code)
     {
-        return true;
+		 return true;
         $verify_obj = self::getPurchaseData($code);
 
         // Check for correct verify code, If empty or date present, then it's valid
@@ -32,8 +31,7 @@ class Stripe_sepa_aeiou
     }
 
     public function validatePurchase($module_name)
-    {
-        return true;
+    {        return true;
         $module          = get_instance()->app_modules->get($module_name);
         $verified        = false;
         $verification_id =  get_option($module_name.'_verification_id');

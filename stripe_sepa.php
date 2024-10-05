@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
 Module Name: Stripe SEPA Payments
 Description: Receive SEPA Payments in Perfex CRM
-Version: 1.0.1
+Version: 1.0.0
 Requires at least: 2.3.*
 Author: Themesic Interactive
 Author URI: https://codecanyon.net/user/themesic/portfolio

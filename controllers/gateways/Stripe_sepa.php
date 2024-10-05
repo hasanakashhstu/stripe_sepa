@@ -21,13 +21,7 @@ class Stripe_sepa extends App_Controller
     {
         check_invoice_restrictions($this->input->get('invoiceid'), $this->input->get('hash'));
         if (is_client_logged_in()) {
-            // $data['contact'] = $this->clients_model->get_contact(get_contact_user_id());
-            $contact = $this->clients_model->get_contact(get_contact_user_id());
-            if (!$contact) {
-                set_alert('warning', 'Contact information could not be retrieved.');
-                redirect(site_url('stripe_sepa/gateways/stripe_sepa/make_payment?invoiceid=' . $this->input->get('invoiceid') . '&total=' . $this->input->get('total') . '&hash=' . $this->input->get('hash')));
-            }
-            $data['contact'] = $contact;
+            $data['contact'] = $this->clients_model->get_contact(get_contact_user_id());
         } else {
             redirect(site_url('authentication'));
         }
@@ -38,12 +32,12 @@ class Stripe_sepa extends App_Controller
             $client = get_client($invoice_data->clientid);
             $custom_fields = $data['custom_fields'];
             handle_custom_fields_post(get_contact_user_id(), $custom_fields);
-            $stripe_sepa_payment_method_id = $this->stripe_sepa_gateway->createPaymentMethod();
-            if (empty($stripe_sepa_payment_method_id)) {
+            $stripe_sepa_source_id = $this->stripe_sepa_gateway->createSource();
+            if (empty($stripe_sepa_source_id)) {
                 set_alert('warning', 'Field Missing or Invalid Info');
                 redirect(site_url('stripe_sepa/gateways/stripe_sepa/make_payment?invoiceid=' . $this->input->get('invoiceid') . '&total=' . $this->input->get('total') . '&hash=' . $this->input->get('hash')));
             } else {
-                $this->stripe_sepa_gateway->createCustomer($data['contact'], $stripe_sepa_payment_method_id);
+                $this->stripe_sepa_gateway->createCustomer($data['contact'], $data['stripe_sepa_source_id']);
             }
             set_alert('success', 'Details updated successfully');
             redirect(site_url('stripe_sepa/gateways/stripe_sepa/make_payment?invoiceid=' . $this->input->get('invoiceid') . '&total=' . $this->input->get('total') . '&hash=' . $this->input->get('hash')));
@@ -52,7 +46,7 @@ class Stripe_sepa extends App_Controller
             redirect(site_url('stripe_sepa/gateways/stripe_sepa/make_payment?invoiceid=' . $this->input->get('invoiceid') . '&total=' . $this->input->get('total') . '&hash=' . $this->input->get('hash')));
         }
     }
-	
+
     /**
      * Invoice View
      * 
@@ -76,10 +70,10 @@ class Stripe_sepa extends App_Controller
         } else {
             redirect(site_url('authentication'));
         }
-        $data['payment_method_id'] = null;
-        $contact_payment_method_id = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_payment_method_id');
-        if (!empty($contact_payment_method_id)) {
-            $data['payment_method_id'] = $this->stripe_sepa_gateway->checkPaymentMethod($contact_payment_method_id);
+        $data['stripe_sepa_source_id'] = null;
+        $contact_stripe_sepa_source_id = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_source_id');
+        if (!empty($contact_stripe_sepa_source_id)) {
+            $data['stripe_sepa_source_id'] = $this->stripe_sepa_gateway->checkSource($contact_stripe_sepa_source_id);
         }
         $data['stripe_sepa_customer_id'] = null;
         $contact_stripe_sepa_customer_id = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_customer_id');
@@ -105,7 +99,7 @@ class Stripe_sepa extends App_Controller
     {
         $this->load->library('stripe_sepa_gateway');
         $stripe_sepa_customer_id =  get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_customer_id');
-        $payment_method_id = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_payment_method_id');
+        $stripe_sepa_source_id = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_source_id');
         check_invoice_restrictions($this->input->get('invoiceid'), $this->input->get('hash'));
         if ($this->input->post()) {
             $_post = $this->input->post();
@@ -114,12 +108,12 @@ class Stripe_sepa extends App_Controller
                 'amount' => get_invoice_total_left_to_pay($_post['invoice_id']),
                 'currency' => $invoice->currency_name,
                 'stripe_sepa_customer_id' => $stripe_sepa_customer_id,
-                'payment_method' => $payment_method_id,
-                'metadata' => ['invoice_id' => $_post['invoice_id'], 'invoice_hash' => $invoice->hash],
+                'stripe_sepa_source_id' => $stripe_sepa_source_id,
+                'metadata' => ['invoice_id' => $_post['invoice_id'], 'invoice_hash' => $invoice->hash]
             ];
             try {
-                $paymentIntent = $this->stripe_sepa_gateway->createPayment($data);
-                set_alert('success', _l($paymentIntent->status == 'succeeded' ? 'online_payment_recorded_success' : 'online_payment_recorded_success_fail_database'));
+                $charge        = $this->stripe_sepa_gateway->createPayment($data);
+                set_alert('success', _l($charge->status == 'pending' ? 'online_payment_recorded_success' : 'online_payment_recorded_success_fail_database'));
                 redirect(site_url('invoice/' . $_post['invoice_id'] . '/' . $_post['hash']));
             } catch (Exception $e) {
                 set_alert('danger', $e->getMessage());
@@ -139,35 +133,70 @@ class Stripe_sepa extends App_Controller
     {
         $this->load->view('stripe_payment', $data);
     }
-    /**
-     * Handle the stripe webhook
-     * 
-     * @param  string $key
-     * @return void
-     */
+
+
+    // /**
+    //  * Handle the stripe webhook
+    //  * 
+    //  * @param  string $key
+    //  * @return void
+    //  */
+    // public function webhook()
+    // {
+    //     $input = json_decode(file_get_contents('php://input'), true);
+    //     $this->load->library('stripe_sepa_gateway');
+    //     if ($input['data']['object']['metadata']['webhookFor'] == "stripe_sepa") {
+    //         if ($input['data']['object']['status'] == 'succeeded') {
+    //             $this->stripe_sepa_gateway->addPayment(
+    //                 [
+    //                     'amount'        => floatval($input['data']['object']['amount']) / 100,
+    //                     'invoiceid'     => $input['data']['object']['metadata']['order_id'],
+    //                     'paymentmethod' => 'directdebit',
+    //                     'transactionid' => $input['data']['object']['id'],
+    //                 ]
+    //             );
+
+    //         }
+    //     }
+    // }
+
+    // MATT CHANGE
     public function webhook()
-    {
-        $input = json_decode(file_get_contents('php://input'), true);
-        $this->load->library('stripe_sepa_gateway');
+{
+    $input = json_decode(file_get_contents('php://input'), true);
+    $this->load->library('stripe_sepa_gateway');
 
-        if (isset($input['type']) && $input['type'] === 'payment_intent.succeeded') {
-            $paymentIntent = $input['data']['object'];
+    if ($input['data']['object']['metadata']['webhookFor'] == "stripe_sepa") {
+        if ($input['data']['object']['status'] == 'succeeded') {
+            $invoiceId = $input['data']['object']['metadata']['order_id'];
 
-            if (isset($paymentIntent['metadata']['webhookFor']) && $paymentIntent['metadata']['webhookFor'] === 'stripe_sepa') {
-                if ($paymentIntent['status'] === 'succeeded') {
-                    $this->stripe_sepa_gateway->addPayment(
-                        [
-                            'amount'        => floatval($paymentIntent['amount_received']) / 100,
-                            'invoiceid'     => $paymentIntent['metadata']['invoice_id'],
-                            'paymentmethod' => 'sepa_debit',
-                            'transactionid' => $paymentIntent['id'],
-                        ]
-                    );
-                }
-            }
+            $this->stripe_sepa_gateway->addPayment(
+                [
+                    'amount'        => floatval($input['data']['object']['amount']) / 100,
+                    'invoiceid'     => $invoiceId,
+                    'paymentmethod' => 'directdebit',
+                    'transactionid' => $input['data']['object']['id'],
+                ]
+            );
+
+            // Supprimer tous les tags de la facture
+            // handle_tags_save('', $invoiceId, 'invoice');
+            // Récupérer tous les tags actuels de l'invoice
+            $currentTags = get_tags_in($invoiceId, 'invoice');
+
+            // Enlever le tag "Attente SEPA"
+            $updatedTags = array_filter($currentTags, function($tag) {
+                return $tag !== 'Attente SEPA';
+            });
+
+            // Sauvegarder les tags mis à jour
+            handle_tags_save(implode(',', $updatedTags), $invoiceId, 'invoice');
         }
-        http_response_code(200);
     }
+}
+
+//MATT CHANGE END
+
     /**
      * Show message to the customer whether the payment is successfully.
      * @param mixed $id invoice id
@@ -185,14 +214,14 @@ class Stripe_sepa extends App_Controller
         $invoice = $this->db->get(db_prefix() . 'invoices')->row();
         $paymentResponse = $this->stripe_sepa_gateway->checkPayment($invoice->token);
         if (!empty($paymentResponse) && !empty($paymentResponse->status)) {
-            // $data = $paymentResponse->getData();
-            if ($paymentResponse->status == 'succeeded') {
+            $data = $paymentResponse->getData();
+            if ($data['status'] == 'paid') {
                 set_alert('success', _l('online_payment_recorded_success'));
             } else {
-                set_alert('danger', $paymentResponse->last_payment_error->message ?? 'Payment failed');
+                set_alert('danger', $data['details']['failureMessage'] ?? '');
             }
         } else {
-            set_alert('danger', 'Payment verification failed');
+            set_alert('danger', $paymentResponse->getMessage());
         }
         redirect(site_url('invoice/' . $invoice->id . '/' . $invoice->hash));
     }

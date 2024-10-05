@@ -5,5 +5,9 @@
 	margin-top: 16px
 }
 .stripe-fr {
-	float: right
+	float: right}
+
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 580px !important;
 }

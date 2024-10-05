@@ -107,34 +107,70 @@ class Stripe_sepa_gateway extends App_gateway
         $stripe = new \Stripe\StripeClient(
             $this->stripe_sepa_api_secret_key
         );
-
-        $paymentIntent = $stripe->paymentIntents->create([
-            'amount' =>  $data['amount'] * 100,
+        $webhookFor = 'stripe_sepa';
+        $theamount = $data['amount'];
+        $payment =  $stripe->charges->create([
+            'amount' =>  $theamount * 100,
             'currency' => strtolower($data['currency']),
             'customer' => $data['stripe_sepa_customer_id'],
-            'payment_method' => $data['payment_method'],
+            'source' => $data['stripe_sepa_source_id'],
             "description" =>  $description,
             "metadata" => [
-                'invoice_id'   => $data['metadata']['invoice_id'],
-                'webhookFor' => 'stripe_sepa'
+                'order_id'   => $data['metadata']['invoice_id'],
+                'webhookFor' => $webhookFor
             ],
-            'confirm' => true,
-            'automatic_payment_methods' => [
-                'enabled' => true,
-                'allow_redirects' => 'never'
-            ],
-            'mandate_data' => [
-            'customer_acceptance' => [
-                'type' => 'online',
-                'online' => [
-                    'ip_address' => $_SERVER['REMOTE_ADDR'],
-                    'user_agent' => $_SERVER['HTTP_USER_AGENT'],
-                ],
-            ],
-        ],
         ]);
 
-        return $paymentIntent;
+
+        //MATT CHANGES
+
+        // Chemin du fichier de log dans le dossier du module
+        $logFile = __DIR__ . '/logs/custom_debug.log';
+
+        // Assurez-vous que le répertoire des logs existe
+        if (!file_exists(__DIR__ . '/logs')) {
+            mkdir(__DIR__ . '/logs', 0755, true);
+        }
+
+        // Message à logger
+        $logMessage = "[" . date("Y-m-d H:i:s") . "] Début de createPayment pour la facture ID: " . $data['metadata']['invoice_id'] . "\n";
+
+
+        // Écrire dans le fichier de log
+        file_put_contents($logFile, 'Fonction CreatePayment.' . "\n", FILE_APPEND);
+        file_put_contents($logFile, $logMessage, FILE_APPEND);
+
+        // Log du statut de payment
+        $logStatusMessage = "[" . date("Y-m-d H:i:s") . "] Statut de createPayment pour la facture ID: " . $data['metadata']['invoice_id'] . " est: " . $payment->status . "\n";
+        file_put_contents($logFile, $logStatusMessage, FILE_APPEND);
+
+        // Après la création du paiement, vérifiez si le statut est 'pending'
+        if ($payment->status == 'pending') {
+            // Obtenez l'instance CI pour accéder aux modèles et bibliothèques de Perfex CRM
+            $CI = &get_instance();
+
+            // Récupérer tous les tags actuels de la facture
+            $currentTags = get_tags_in($data['metadata']['invoice_id'], 'invoice');
+
+            file_put_contents($logFile, 'Tags :'. implode(', ',$currentTags) . "\n", FILE_APPEND);
+
+            // Ajouter le tag "Attente SEPA" si ce n'est pas déjà fait
+            if (!in_array('Attente SEPA', $currentTags)) {
+                $currentTags[] = 'Attente SEPA'; // Ajoute le tag au tableau des tags
+
+                // Convertir le tableau des tags en chaîne de caractères séparée par des virgules pour la sauvegarde
+                $tagsAsString = implode(',', $currentTags);
+                file_put_contents($logFile, 'Tags AS String :'. $tagsAsString . "\n", FILE_APPEND);
+                // Sauvegarder les tags mis à jour sur la facture
+                handle_tags_save($tagsAsString, $data['metadata']['invoice_id'], 'invoice');
+            }
+
+            // Vous pouvez choisir de logger le succès de l'ajout du tag ou de traiter d'autres logiques spécifiques ici
+        }
+
+        //FIN MATT CHANGES
+
+        return $payment;
     }
     /**
      * Check Payment work flow by using Stripe Sepa Payment ID
@@ -148,7 +184,7 @@ class Stripe_sepa_gateway extends App_gateway
         $stripe = new \Stripe\StripeClient(
             $this->stripe_sepa_api_secret_key
         );
-        $payment = $stripe->paymentIntents->retrieve(
+        $payment = $stripe->charges->retrieve(
             $contact_stripe_sepa_payment_id,
             []
         );
@@ -160,7 +196,7 @@ class Stripe_sepa_gateway extends App_gateway
      * @param  object $customerData Customer Data
      * @return string CustomerID
      */
-    public function createCustomer($customerData, $paymentMethodId)
+    public function createCustomer($customerData, $contact_stripe_sepa_source_id)
     {
         $contact_stripe_sepa_customer_id = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_customer_id');
         try {
@@ -171,26 +207,14 @@ class Stripe_sepa_gateway extends App_gateway
                 $customer =  $stripe->customers->create([
                     "name" => $customerData->firstname . ' ' . $customerData->lastname,
                     "email" => $customerData->email,
-                    // 'source' =>  $contact_stripe_sepa_source_id,
+                    'source' =>  $contact_stripe_sepa_source_id,
                 ]);
-
-                $stripe->paymentMethods->attach(
-                    $paymentMethodId,
-                    ['customer' => $customer->id]
-                );
             } else {
-                $customer = $stripe->customers->retrieve($contact_stripe_sepa_customer_id);
 
-                $stripe->paymentMethods->attach(
-                    $paymentMethodId,
-                    ['customer' => $customer->id]
+                $customer = $stripe->customers->update(
+                    $contact_stripe_sepa_customer_id,
+                    ['source' =>  $contact_stripe_sepa_source_id]
                 );
-
-                $stripe->customers->update($customer->id, [
-                    'invoice_settings' => [
-                        'default_payment_method' => $paymentMethodId,
-                    ],
-                ]);
             }
             update_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_customer_id', $customer->id);
             return $customer->id;
@@ -228,7 +252,7 @@ class Stripe_sepa_gateway extends App_gateway
      * Create SourceID 
      * @return string SourceID
      */
-    public function createPaymentMethod()
+    public function createSource()
     {
         try {
 
@@ -240,28 +264,22 @@ class Stripe_sepa_gateway extends App_gateway
             if (!empty($contacts_stripe_consumer_name) && !empty($contacts_stripe_consumer_email) && !empty($contacts_stripe_consumer_iban)) {
                 $stripe = new \Stripe\StripeClient($this->stripe_sepa_api_secret_key);
 
-                $paymentMethod = $stripe->paymentMethods->create([
-                    'type' => 'sepa_debit',
-                    'sepa_debit' => [
-                        'iban' => $contacts_stripe_consumer_iban,
-                    ],
-                    'billing_details' => [
-                        'name' => $contacts_stripe_consumer_name,
-                        'email' => $contacts_stripe_consumer_email,
-                    ],
-                ]);
+                $stripeSource =  $stripe->sources->create(
+                    [
+                        'type' => 'sepa_debit',
+                        'sepa_debit' => ['iban' => $contacts_stripe_consumer_iban],
+                        'currency' => 'eur',
+                        'owner' => [
+                            'name' => $contacts_stripe_consumer_name,
+                            'email' => $contacts_stripe_consumer_email,
+                        ],
+                    ]
+                );
 
-                $stripeCustomerId = get_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_customer_id');
-                if (!empty($stripeCustomerId)) {
-                    $stripe->paymentMethods->attach(
-                        $paymentMethod->id,
-                        ['customer' => $stripeCustomerId]
-                    );
+                if ($stripeSource->status == "chargeable") {
+                    update_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_source_id', $stripeSource->id);
+                    return $stripeSource->id;
                 }
-
-                update_contact_meta(get_contact_user_id(), 'contact_stripe_sepa_payment_method_id', $paymentMethod->id);
-
-                return $paymentMethod->id;
             }
             return null;
         } catch (Exception $e) {
@@ -277,19 +295,19 @@ class Stripe_sepa_gateway extends App_gateway
      * @param  string $contact_stripe_sepa_source_id SourceID
      * @return string SourceID
      */
-    public function checkPaymentMethod($payment_method_id)
+    public function checkSource($contact_stripe_sepa_source_id)
     {
         try {
 
             $stripe = new \Stripe\StripeClient(
                 $this->stripe_sepa_api_secret_key
             );
-            $paymentMethod = $stripe->paymentMethods->retrieve(
-                $payment_method_id,
+            $stripeSource = $stripe->sources->retrieve(
+                $contact_stripe_sepa_source_id,
                 []
             );
-            if ($paymentMethod->type === "sepa_debit") {
-                return $paymentMethod->id;
+            if ($stripeSource->status == "chargeable") {
+                return $stripeSource->id;
             }
             return null;
         } catch (Exception $e) {
@@ -311,10 +329,8 @@ class Stripe_sepa_gateway extends App_gateway
             $hook = $stripe->webhookEndpoints->create([
                 'url' => $webhookUrl,
                 'enabled_events' => [
-                    'payment_intent.succeeded',
-                    'payment_intent.payment_failed',
-                    'payment_intent.canceled',
-                    'payment_method.attached',
+                    'charge.failed',
+                    'charge.succeeded',
                 ]
             ]);
             update_option('contact_stripe_sepa_hook_id',  $hook->id);
@@ -348,6 +364,111 @@ class Stripe_sepa_gateway extends App_gateway
             return null;
         } catch (Exception $e) {
 
+            return null;
+        }
+    }
+
+
+
+
+
+    //MATT CHANGES
+
+    /**
+     * Create a Stripe SEPA source for a specific contact
+     * @param  int $contactUserId User ID of the contact
+     * @return string|null Stripe SEPA source ID or null if creation fails
+     */
+    function createSourceFromAdmin($contactUserId)
+    {
+        $CI = &get_instance();
+        $CI->load->library('stripe_sepa_gateway');
+
+        // Retrieve necessary contact information using the provided contact user ID
+        $contacts_stripe_consumer_name = get_custom_field_value($contactUserId, 'contacts_stripe_sepa_consumer_name', 'contacts');
+        $contacts_stripe_consumer_email = get_custom_field_value($contactUserId, 'contacts_stripe_sepa_consumer_email', 'contacts');
+        $contacts_stripe_consumer_iban = get_custom_field_value($contactUserId, 'contacts_stripe_sepa_consumer_iban', 'contacts');
+
+        // Check if all required information is available
+        if (!empty($contacts_stripe_consumer_name) && !empty($contacts_stripe_consumer_email) && !empty($contacts_stripe_consumer_iban)) {
+            try {
+                // Initialize Stripe client with the secret key
+                $stripe = new \Stripe\StripeClient(
+                    $this->stripe_sepa_api_secret_key
+                );
+
+
+                // Create a new Stripe SEPA source with the contact's details
+                $stripeSource = $stripe->sources->create([
+                    'type' => 'sepa_debit',
+                    'sepa_debit' => ['iban' => $contacts_stripe_consumer_iban],
+                    'currency' => 'eur',
+                    'owner' => [
+                        'name' => $contacts_stripe_consumer_name,
+                        'email' => $contacts_stripe_consumer_email,
+                    ],
+                ]);
+
+                // If the source is created successfully and is chargeable, save its ID and return it
+                if ($stripeSource->status == "chargeable") {
+                    update_contact_meta($contactUserId, 'contact_stripe_sepa_source_id', $stripeSource->id);
+                    return $stripeSource->id;
+                }
+            } catch (Exception $e) {
+                // Handle exceptions and log any errors
+                log_message('error', 'Stripe SEPA Source creation failed: ' . $e->getMessage());
+            }
+        }
+
+        // Return null if the source creation fails or required information is missing
+        return null;
+    }
+
+
+    /**
+     * Create or update a Stripe SEPA customer for a specific contact
+     * @param int $contactUserId User ID of the contact
+     * @param string $contact_stripe_sepa_source_id Stripe SEPA source ID
+     * @return string|null Stripe SEPA customer ID or null if operation fails
+     */
+    function createCustomerFromAdmin($contactUserId, $contact_stripe_sepa_source_id)
+    {
+        $CI = &get_instance();
+        $CI->load->library('stripe_sepa_gateway');
+
+        // Récupérer l'ID client Stripe SEPA existant pour le contact
+        $contact_stripe_sepa_customer_id = get_contact_meta($contactUserId, 'contact_stripe_sepa_customer_id');
+
+        try {
+            // Initialiser le client Stripe avec la clé secrète de l'API
+            $stripe = new \Stripe\StripeClient($CI->stripe_sepa_gateway->stripe_sepa_api_secret_key);
+
+            // Récupérer les données du contact
+            $customerData = $CI->clients_model->get_contact($contactUserId);
+            if (!$customerData) {
+                throw new Exception('Contact data not found for user ID: ' . $contactUserId);
+            }
+
+            // Créer ou mettre à jour le client Stripe SEPA
+            if (empty($contact_stripe_sepa_customer_id)) {
+                $customer = $stripe->customers->create([
+                    "name" => $customerData->firstname . ' ' . $customerData->lastname,
+                    "email" => $customerData->email,
+                    'source' => $contact_stripe_sepa_source_id,
+                ]);
+            } else {
+                $customer = $stripe->customers->update(
+                    $contact_stripe_sepa_customer_id,
+                    ['source' => $contact_stripe_sepa_source_id]
+                );
+            }
+
+            // Mettre à jour l'ID client Stripe SEPA dans les métadonnées du contact
+            update_contact_meta($contactUserId, 'contact_stripe_sepa_customer_id', $customer->id);
+
+            return $customer->id;
+        } catch (Exception $e) {
+            log_message('error', 'Stripe SEPA Customer creation or update failed: ' . $e->getMessage());
             return null;
         }
     }
